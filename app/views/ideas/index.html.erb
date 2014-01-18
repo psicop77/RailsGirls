@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th>Title</th>
+      <th>Composer</th>
       <th>Picture</th>
       <th></th>
       <th></th>
@@ -20,7 +20,7 @@
         <td><%= idea.picture %></td>
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'DeleteMe', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
