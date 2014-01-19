@@ -1,6 +1,6 @@
-<h1>Listing ideas</h1>
+<h1>Tango Music Study Guide (Golden Age)</h1>
 
-<table>
+<table class="table table-responsive table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -17,10 +17,10 @@
       <tr>
         <td><%= idea.name %></td>
         <td><%= idea.description %></td>
-        <td><%= idea.picture %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Delete', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag(idea.picture_url, :width => 150, :class => "img-thumbnail") if idea.picture.present? %></td>
+        <td><%= link_to 'Show', idea, :class => "btn btn-info btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_idea_path(idea), :class => "btn btn-warning btn-xs" %></td>
+        <td><%= link_to 'Delete', idea, :class => "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to 'New Song', new_idea_path, :class => "btn btn-success btn-block" %>
